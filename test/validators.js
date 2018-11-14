@@ -41,7 +41,10 @@ function keysInFromKeys(keys) {
 function wrap(fn) {
     return res => {
         const body = res.body;
-        const values = Object.values(body);
+        const keys = Object.keys(body);
+        const values = keys.map( key => {
+            return body[key];
+        });
         return fn(values);
     }
 }
