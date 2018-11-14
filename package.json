@@ -1,6 +1,6 @@
 {
   "name": "koa-body-images",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Middleware to extract images from koa-body",
   "main": "index.js",
   "scripts": {
@@ -14,11 +14,17 @@
     "koa-body",
     "images"
   ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "validators.js",
+    "package.json"
+  ],
   "author": "Nevodnich Evgeny",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jenyafross/koa-body-image/issues"
   },
-  "homepage": "https://github.com/jenyafross/koa-body-image#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/jenyafross/koa-body-image#readme"
 }
