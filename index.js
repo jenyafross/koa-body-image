@@ -101,6 +101,3 @@ class KoaBodyImagesTypeError extends KoaBodyImagesError {
         super(...args);
     }
 }
-
-//let middleware = koaBodyImages({fromKeys: [], multiples: true});
-//middleware({request: {files: { upload: [{type: "image/jpeg"},{type: "image/png"}], test: {type: "image/png"}, test2: {type: "image/webp"}, someKey : {type: 'stream'} }}}, function() {console.log("end")});

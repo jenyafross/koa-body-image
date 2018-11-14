@@ -60,5 +60,6 @@ typings/
 # next.js build output
 .next
 
-.git
+.git/
+package-lock.json
 .idea/

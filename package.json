@@ -4,7 +4,7 @@
   "description": "Middleware to extract images from koa-body",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,12 @@
   "bugs": {
     "url": "https://github.com/jenyafross/koa-body-image/issues"
   },
-  "homepage": "https://github.com/jenyafross/koa-body-image#readme"
+  "homepage": "https://github.com/jenyafross/koa-body-image#readme",
+  "devDependencies": {
+    "koa": "^2.6.2",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  }
 }
