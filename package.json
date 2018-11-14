@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/jenyafross/koa-body-image/issues"
   },
-  "homepage": "https://github.com/jenyafross/koa-body-image#readme"
+  "homepage": "https://github.com/jenyafross/koa-body-image#readme",
+  "dependencies": {}
 }
