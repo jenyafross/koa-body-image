@@ -59,7 +59,6 @@ function koaBodyImages(opts) {
 
         ctx.request.images = Object.keys(images).length ? images : undefined;
 
-        console.log(ctx.request.images);
         return next();
     }
 }
@@ -83,7 +82,6 @@ function getImages(files) {
 
     if (Array.isArray(files)) {
         images = files.filter( file => isImage(file));
-        console.log(images);
         return images.length ? images : null;
     }
     return isImage(files) ? files : null;
@@ -103,6 +101,3 @@ class KoaBodyImagesTypeError extends KoaBodyImagesError {
         super(...args);
     }
 }
-
-let middleware = koaBodyImages({fromKeys: [], multiples: true});
-middleware({request: {files: { upload: [{type: "image/jpeg"},{type: "image/png"}], test: {type: "image/png"}, test2: {type: "image/webp"}, someKey : {type: 'stream'} }}}, function() {console.log("end")});
