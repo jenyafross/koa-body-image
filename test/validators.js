@@ -38,6 +38,23 @@ function keysInFromKeys(keys) {
     }
 }
 
+function areFromTypes(types) {
+    return res => {
+        const body = res.body;
+        const responseKeys = Object.keys(body);
+        const fromTypes = responseKeys.every( key => {
+           return types.some( type => {
+               if(Array.isArray(body[key])) {
+                   return body[key].every( value => Boolean(~value.type.indexOf(type)));
+               }
+               return Boolean( ~body[key].type.indexOf(type) )
+           })
+        });
+
+        if ( ! fromTypes ) throw new Error("Some returned type is not from types");
+    }
+}
+
 function wrap(fn) {
     return res => {
         const body = res.body;
@@ -52,5 +69,6 @@ module.exports = {
     areImages    : wrap(_areImages),
     areArrays    : wrap(_areArrays),
     areNotArrays : wrap(_areNotArrays),
+    areFromTypes,
     keysInFromKeys,
 };
